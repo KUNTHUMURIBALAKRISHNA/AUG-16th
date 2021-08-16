@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<string.h>
+struct  student 
+{
+    char name[20];
+    char gender;
+    static int id;//struct didn't support static variables
+    //s1.id=210;
+   // printf("%d\n",s1.id);//it didn't support predefined functions
+    int add(int a,int b)//it didn't support functions also
+    {
+        return a+b;
+    }
+    //construction creation,data hiding,access specifiers are not supported
+};
+int main()
+{
+    struct student s1;
+    int add(int,int);
+    s1.id=210;
+    s1.gender='m';
+    strcpy(s1.name,"Bala");
+    printf("name=%s\n",s1.name);
+    printf("id=%d\n",s1.id);
+    printf("gender=%c\n",s1.gender);
+    return 0;
+}
